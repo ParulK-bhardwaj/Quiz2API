@@ -11,8 +11,6 @@ def homepage():
 
 SWAPI_API_URL = "https://swapi.py4e.com/api/"
 
-
-
 @app.route("/result")
 def search():
     """Show a form to search for info from Swapi API."""
@@ -26,7 +24,7 @@ def search():
         for film in films:
             response_films.append(json.loads(requests.get(film).content))
     except KeyError:
-        response_films
+        response_films = ""
 
     try:
         response_homeworld = requests.get(character["homeworld"])
@@ -39,8 +37,6 @@ def search():
         'homeworld': homeworld
     }
     return render_template('result.html', **context)
-
-
 
 if __name__ == '__main__':
     app.config['ENV'] = 'development'
