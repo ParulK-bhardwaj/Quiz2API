@@ -1,0 +1,15 @@
+/* result.html{ text-transform: capitalize; } */
+body {
+    margin: 15px;
+    background-color:azure;
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+
+h1 {
+    font-size: 20px;
+}
+
+em {
+    font-weight: bold;
+}
