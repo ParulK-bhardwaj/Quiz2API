@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    form_results
+    Character Info
 {% endblock title %}
 
 {% block content %}
@@ -13,13 +13,13 @@
         <p>Hair Color: {{character.hair_color}}</p>
         <p>Eye Color: {{character.eye_color}}</p>
         <p>Home World Name: {{homeworld.name}}</p>
-        <p>Here is the list of the movies <em>{{character.name}}</em> appeared in:</p>
+        <p>Here is the list of the movies <i>{{character.name}}</i> appeared in:</p>
         {% for film in films%}
             <li>{{film['title']}}</li>
         {% endfor %}
 
     {% else %}
-        <p>ID does not exist, please try again with the correct ID.</p>
+        <em>ID does not exist, please try again with the correct ID.</em>
     {% endif %}
     
 {% endblock content %}
